@@ -1,77 +1,77 @@
-import React from 'react'
+import React from "react";
 
-import ExampleComponent from 'cb-react-menubar'
+import Menubar from "cb-react-menubar";
 
-require('react-dom')
-window.React2 = require('react')
-console.log(window.React1 === window.React2)
+require("react-dom");
+window.React2 = require("react");
+console.log(window.React1 === window.React2);
 
 const App = () => {
   const menuItems = {
-    value: 'menu-items',
+    value: "menu-items",
     items: [
       {
-        value: 'Fashion',
+        value: "Fashion",
         items: [
           {
-            value: 'back'
+            value: "back"
           },
           {
-            value: 'Men',
+            value: "Men",
             items: [
               {
-                value: 'back'
+                value: "back"
               },
               {
-                value: 'Shirts'
+                value: "Shirts"
               }
             ]
           },
           {
-            value: 'Women',
+            value: "Women",
             items: [
               {
-                value: 'back'
+                value: "back"
               },
               {
-                value: 'Jackets'
+                value: "Jackets"
               },
               {
-                value: 'T-Shirts'
+                value: "T-Shirts"
               },
               {
-                value: 'Underwear'
+                value: "Underwear"
               }
             ]
           },
           {
-            value: 'Children'
+            value: "Children"
           }
         ]
       },
       {
-        value: 'Electronics',
+        value: "Electronics",
         items: []
       },
       {
-        value: 'Furnitures',
+        value: "Furnitures",
         items: []
       },
       {
-        value: 'Jewelery&watches',
+        value: "Jewelery&watches",
         items: []
       }
     ]
-  }
+  };
   // const backgroundColor = 'green'
   // const textColor = 'white'
-  const animation = ['slideIn', 'slideOut']
+  const animation = ["slideIn", "slideOut"];
 
   return (
-    <div style={{marginLeft: 100}} className='Main'>
+    <div style={{ marginLeft: 100 }} className="Main">
       <h1>Hello google</h1>
-      <ExampleComponent />
+      <Menubar data={menuItems} animation={animation}/>
     </div>
-  )
-}
-export default App
+  );
+};
+export default App;

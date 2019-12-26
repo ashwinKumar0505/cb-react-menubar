@@ -9,6 +9,11 @@ const MenuBar = props => {
     document.addEventListener('mousedown', event =>
       handleClickOutside(event, menubarRef)
     )
+    return () => {
+      document.removeEventListener('mousedown', event =>
+        handleClickOutside(event, menubarRef)
+      )
+    }
   })
 
   function handleClickOutside(event, ref) {
@@ -89,7 +94,12 @@ const MenuBar = props => {
   const menubarRef = useRef(null)
 
   return (
-    <div className={classNames} ref={menubarRef} onClick={closeItemsHandler} style={{fontSize: props.fontSize ? props.fontSize : 16}}>
+    <div
+      className={classNames}
+      ref={menubarRef}
+      onClick={closeItemsHandler}
+      style={{ fontSize: props.fontSize ? props.fontSize : 16 }}
+    >
       <BurgerMenu
         showItemsHandler={showItemsHandler}
         color={props.backgroundColor}
