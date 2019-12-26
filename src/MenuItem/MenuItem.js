@@ -12,7 +12,6 @@ const MenuItem = props => {
         className='NextArrow'
         style={{ display: props.nextValue ? 'block' : 'none' }}
       >
-        {' '}
         <IoMdArrowDropright />
       </p>
     </div>
